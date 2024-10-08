@@ -412,6 +412,10 @@ class Cli {
               this.findVehicleToTow(selectedVehicle);
               return; 
           }
+          else {
+            console.log('Only trucks can tow.');
+            return;
+          }
       }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         
@@ -419,11 +423,13 @@ class Cli {
         const selectedVehicle = this.vehicles.find(vehicle => vehicle.vin === this.selectedVehicleVin);
         if (selectedVehicle instanceof Motorbike) {
           selectedVehicle.wheelie();
+          this.performActions();
           return;
         }
+        else {
+          console.log('Only motorbikes can do a wheelie.');
         }
-        
-        else if (answers.action === 'Select or create another vehicle') {
+        } else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
           return;
