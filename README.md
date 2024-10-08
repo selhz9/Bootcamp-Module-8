@@ -29,4 +29,4 @@ None
 Feel free to reach out to me here with any questions or comments:
 - Email: selhz@email.com
 - GitHub: selhz
-- Link to video:
+- Link to video: https://www.youtube.com/watch?v=4b9mcp9RAdc
